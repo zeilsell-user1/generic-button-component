@@ -1,9 +1,9 @@
 import "./styles.css";
 import type { ReactNode } from "react";
-import { ButtonTypes } from "./generic-button.types";
+import type { ButtonStylesType } from "./generic-button.types";
 interface Props {
     children?: ReactNode;
-    style: ButtonTypes;
+    style: ButtonStylesType;
     onCLick?: () => void;
     text?: string;
 }

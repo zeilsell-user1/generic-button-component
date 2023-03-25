@@ -1,19 +1,20 @@
 import { ReactNode } from 'react';
 
-declare const enum ButtonTypes {
-    ActiveCta = 0,
-    InactiveCta = 1,
-    Back = 2,
-    Okay = 3,
-    Cancel = 4
-}
+declare const ButtonStyles: {
+    readonly ACTIVECTA: "ACTIVECTA";
+    readonly INACTIVECTA: "INACTIVECTA";
+    readonly BACK: "BACK";
+    readonly OKAY: "OKAY";
+    readonly CANCEL: "CANCEL";
+};
+type ButtonStylesType = keyof typeof ButtonStyles;
 
 interface Props {
     children?: ReactNode;
-    style: ButtonTypes;
+    style: ButtonStylesType;
     onCLick?: () => void;
     text?: string;
 }
 declare const GenericButton: (props: Props) => JSX.Element;
 
-export { ButtonTypes, GenericButton };
+export { ButtonStyles, ButtonStylesType, GenericButton };

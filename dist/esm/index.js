@@ -33,40 +33,51 @@ function styleInject(css, ref) {
 var css_248z = ".button {\n  cursor: pointer;\n  border-radius: 5%;\n  background: white;\n  color: black;\n  border: 1px solid black;\n  margin: 1%;\n}\n";
 styleInject(css_248z,{"insertAt":"top"});
 
+//'enum like' object declaration (notice the `as const` at the end)
+// used becasue exporting const enum will not work when imported
+// into another module.
+const ButtonStyles = {
+    ACTIVECTA: "ACTIVECTA",
+    INACTIVECTA: "INACTIVECTA",
+    BACK: "BACK",
+    OKAY: "OKAY",
+    CANCEL: "CANCEL",
+};
+
 const GenericButton = (props) => {
     const [buttonStyle, setButtonStyle] = useState({});
     useEffect(() => {
         const styleDetails = {};
         switch (props.style) {
-            case 0 /* ButtonTypes.ActiveCta */: {
+            case ButtonStyles.ACTIVECTA: {
                 styleDetails.background = "#e69122";
                 styleDetails.textColor = "#30220f";
                 styleDetails.hoverColor = "black";
                 styleDetails.border = "#30220f";
                 break;
             }
-            case 1 /* ButtonTypes.InactiveCta */: {
+            case ButtonStyles.INACTIVECTA: {
                 styleDetails.background = "#e3ddd5";
                 styleDetails.textColor = "#ebcea9";
                 styleDetails.hoverColor = "#ebcea9";
                 styleDetails.border = "#24190a";
                 break;
             }
-            case 2 /* ButtonTypes.Back */: {
+            case ButtonStyles.BACK: {
                 styleDetails.background = "#f5f3f05";
                 styleDetails.textColor = "#30220f";
                 styleDetails.hoverColor = "#30220f";
                 styleDetails.border = "#24190a";
                 break;
             }
-            case 3 /* ButtonTypes.Okay */: {
+            case ButtonStyles.OKAY: {
                 styleDetails.background = "#f5f3f05";
                 styleDetails.textColor = "#30220f";
                 styleDetails.hoverColor = "#f76402";
                 styleDetails.border = "#24190a";
                 break;
             }
-            case 4 /* ButtonTypes.Cancel */: {
+            case ButtonStyles.CANCEL: {
                 styleDetails.background = "#f5f3f05";
                 styleDetails.textColor = "#30220f";
                 styleDetails.hoverColor = "#30220f";
@@ -90,14 +101,5 @@ const GenericButton = (props) => {
         } }, { children: [props.text, props.children] })));
 };
 
-var ButtonTypes;
-(function (ButtonTypes) {
-    ButtonTypes[ButtonTypes["ActiveCta"] = 0] = "ActiveCta";
-    ButtonTypes[ButtonTypes["InactiveCta"] = 1] = "InactiveCta";
-    ButtonTypes[ButtonTypes["Back"] = 2] = "Back";
-    ButtonTypes[ButtonTypes["Okay"] = 3] = "Okay";
-    ButtonTypes[ButtonTypes["Cancel"] = 4] = "Cancel";
-})(ButtonTypes || (ButtonTypes = {}));
-
-export { ButtonTypes, GenericButton };
+export { ButtonStyles, GenericButton };
 //# sourceMappingURL=index.js.map

@@ -1,2 +1,2 @@
 export { GenericButton } from "./generic-button";
-export { ButtonTypes } from "./generic-button.types";
+export { ButtonStyles, ButtonStylesType } from "./generic-button.types";

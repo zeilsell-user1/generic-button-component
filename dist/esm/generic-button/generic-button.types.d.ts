@@ -1,7 +1,8 @@
-export declare const enum ButtonTypes {
-    ActiveCta = 0,
-    InactiveCta = 1,
-    Back = 2,
-    Okay = 3,
-    Cancel = 4
-}
+export declare const ButtonStyles: {
+    readonly ACTIVECTA: "ACTIVECTA";
+    readonly INACTIVECTA: "INACTIVECTA";
+    readonly BACK: "BACK";
+    readonly OKAY: "OKAY";
+    readonly CANCEL: "CANCEL";
+};
+export type ButtonStylesType = keyof typeof ButtonStyles;

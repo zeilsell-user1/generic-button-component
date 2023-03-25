@@ -1,7 +1,7 @@
 {
   "name": "@zeilsell-user1/generic-button-component",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "This is a simple generic button component to be used with react/next apps",
   "author": "Richard George <richard.john.george.3@gmail.com>",
   "license": "MIT",

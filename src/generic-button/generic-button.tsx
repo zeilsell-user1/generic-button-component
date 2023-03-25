@@ -3,11 +3,12 @@ import "./styles.css";
 import type { ReactNode } from "react";
 import { useEffect, useState } from "react";
 
-import { ButtonTypes } from "./generic-button.types";
+import type { ButtonStylesType } from "./generic-button.types";
+import { ButtonStyles } from "./generic-button.types";
 
 interface Props {
   children?: ReactNode;
-  style: ButtonTypes;
+  style: ButtonStylesType;
   onCLick?: () => void;
   text?: string;
 }
@@ -27,35 +28,35 @@ export const GenericButton = (props: Props): JSX.Element => {
     const styleDetails: ButtonStyle = {} as ButtonStyle;
 
     switch (props.style) {
-      case ButtonTypes.ActiveCta: {
+      case ButtonStyles.ACTIVECTA: {
         styleDetails.background = "#e69122";
         styleDetails.textColor = "#30220f";
         styleDetails.hoverColor = "black";
         styleDetails.border = "#30220f";
         break;
       }
-      case ButtonTypes.InactiveCta: {
+      case ButtonStyles.INACTIVECTA: {
         styleDetails.background = "#e3ddd5";
         styleDetails.textColor = "#ebcea9";
         styleDetails.hoverColor = "#ebcea9";
         styleDetails.border = "#24190a";
         break;
       }
-      case ButtonTypes.Back: {
+      case ButtonStyles.BACK: {
         styleDetails.background = "#f5f3f05";
         styleDetails.textColor = "#30220f";
         styleDetails.hoverColor = "#30220f";
         styleDetails.border = "#24190a";
         break;
       }
-      case ButtonTypes.Okay: {
+      case ButtonStyles.OKAY: {
         styleDetails.background = "#f5f3f05";
         styleDetails.textColor = "#30220f";
         styleDetails.hoverColor = "#f76402";
         styleDetails.border = "#24190a";
         break;
       }
-      case ButtonTypes.Cancel: {
+      case ButtonStyles.CANCEL: {
         styleDetails.background = "#f5f3f05";
         styleDetails.textColor = "#30220f";
         styleDetails.hoverColor = "#30220f";
