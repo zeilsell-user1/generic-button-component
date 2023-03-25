@@ -1,7 +1,7 @@
 import "./styles.css";
 
 import type { ReactNode } from "react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { ButtonTypes } from "./generic-button.types";
 
@@ -25,8 +25,6 @@ export const GenericButton = (props: Props): JSX.Element => {
 
   useEffect(() => {
     const styleDetails: ButtonStyle = {} as ButtonStyle;
-
-    console.log("props = ",props);
 
     switch (props.style) {
       case ButtonTypes.ActiveCta: {

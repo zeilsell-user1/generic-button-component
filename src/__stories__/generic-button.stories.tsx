@@ -1,5 +1,3 @@
-import React from "react";
-
 import { GenericButton } from "../generic-button/generic-button";
 import { ButtonTypes } from "../generic-button/generic-button.types";
 
