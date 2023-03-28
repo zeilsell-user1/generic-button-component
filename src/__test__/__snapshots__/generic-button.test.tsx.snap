@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`genericbutton component should render a back button 1`] = `[Function]`;
+
+exports[`genericbutton component should render a cancel button 1`] = `[Function]`;
+
+exports[`genericbutton component should render an OK button 1`] = `[Function]`;
+
+exports[`genericbutton component should render an active CTA button 1`] = `[Function]`;
+
+exports[`genericbutton component should render an inactive CTA button 1`] = `[Function]`;
